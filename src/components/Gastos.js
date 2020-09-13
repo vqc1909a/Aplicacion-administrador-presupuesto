@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Form from './Form';
 import Listado from './Listado';
+import PropTypes from 'prop-types';
+
 const Gastos = ({changeRestante, restante, presupuesto}) => {
      const [gastos, changeGastos] = useState([]);
      const agregarGasto = (gasto) => {
@@ -36,5 +38,10 @@ const Gastos = ({changeRestante, restante, presupuesto}) => {
           </section>
      );
 }
- 
+Gastos.propTypes = {
+     changeRestante: PropTypes.func.isRequired,
+     restante: PropTypes.number.isRequired,
+     presupuesto: PropTypes.number.isRequired
+}
+
 export default Gastos;

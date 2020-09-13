@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Error from './Error';
 import Success from './Success';
-const {
-     v4: uuidv4
-} = require("uuid");
+import PropTypes from 'prop-types';
+import {uuid} from 'uuidv4';
+
 const Gasto = ({title, agregarGasto, restante}) => {
      const [gasto, changeGasto] = useState({
           name: '',
@@ -73,7 +73,7 @@ const Gasto = ({title, agregarGasto, restante}) => {
           agregarGasto({
                ...gasto,
                costo: parseInt(costo),
-               id: uuidv4()
+               id: uuid()
           });
           changeGasto({
                name: '',
@@ -102,5 +102,9 @@ const Gasto = ({title, agregarGasto, restante}) => {
           </div>
      );
 }
- 
+ Gasto.propTypes = {
+      title: PropTypes.string.isRequired,
+      agregarGasto: PropTypes.func.isRequired,
+      restante: PropTypes.number.isRequired
+ }
 export default Gasto;

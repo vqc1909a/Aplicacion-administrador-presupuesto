@@ -18,7 +18,7 @@ function App() {
     <Fragment>
       <Header title="Gasto Semanal" />
       <main>
-          <Question title="Coloca tu presupuesto" agregarPresupesto={agregarPresupuesto} agregarRestante={agregarRestante} estado={presupuesto}></Question>
+          <Question title="Coloca tu presupuesto" agregarPresupuesto={agregarPresupuesto} agregarRestante={agregarRestante} estado={presupuesto}></Question>
           <Gastos changeRestante={changeRestante} restante={restante} presupuesto={presupuesto}></Gastos>
       </main>
     </Fragment>

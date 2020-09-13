@@ -2,9 +2,9 @@ import React from 'react';
 import Gasto from './Gasto';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import definirColorRestante from '../helpers/definirColorRestante';
-const Listado = ({title, gastos, presupuesto, restante, eliminarGasto}) => {
+import PropTypes from 'prop-types';
 
-    
+const Listado = ({title, gastos, presupuesto, restante, eliminarGasto}) => {
      return (
           <div className="col-md-6">
                <h2 className="text-center">{title}</h2>
@@ -24,11 +24,18 @@ const Listado = ({title, gastos, presupuesto, restante, eliminarGasto}) => {
                                    </CSSTransition>
                               )}
                     </TransitionGroup>
-                         <li className="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">Total: <span className="p-3 bg-primary text-white">$ {presupuesto - restante}</span></li>
+                         <li className="list-group-item d-flex justify-content-between align-items-center font-weight-bolder border-top border-primary">Total: <span className="p-3 bg-primary text-white">$ {presupuesto - restante}</span></li>
                </ul>
 
           </div>
      );
 }
- 
+
+Listado.propTypes = {
+     title: PropTypes.string.isRequired,
+     gastos: PropTypes.array.isRequired,
+     presupuesto: PropTypes.number.isRequired,
+     restante: PropTypes.number.isRequired,
+     eliminarGasto: PropTypes.func.isRequired
+}
 export default Listado;

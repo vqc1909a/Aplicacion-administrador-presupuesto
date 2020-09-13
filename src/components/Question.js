@@ -1,7 +1,9 @@
 import React ,{useState} from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error';
 import Success from './Success';
-const Question = ({title, agregarPresupesto, agregarRestante, estado}) => {
+
+const Question = ({title, agregarPresupuesto, agregarRestante, estado}) => {
      const [presupuesto, changePresupuesto] = useState({
           value: '',
           success: '',
@@ -38,7 +40,7 @@ const Question = ({title, agregarPresupesto, agregarRestante, estado}) => {
                });
                return null;
           }
-          agregarPresupesto(parseInt(value));
+          agregarPresupuesto(parseInt(value));
           agregarRestante(parseInt(value));
           changePresupuesto({
                value: '',
@@ -74,5 +76,10 @@ const Question = ({title, agregarPresupesto, agregarRestante, estado}) => {
           </section>
      );
 }
- 
+Question.propTypes = {
+     title: PropTypes.string.isRequired,
+     agregarPresupuesto: PropTypes.func.isRequired,
+     agregarRestante: PropTypes.func.isRequired,
+     estado: PropTypes.number.isRequired
+}
 export default Question;
