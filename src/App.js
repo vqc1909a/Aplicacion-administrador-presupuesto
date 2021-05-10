@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Fragment>
-      <Header title="Gasto Semanal" />
+      <Header title="Gasto Semanal Hoy" />
       <main>
           <Question title="Coloca tu presupuesto" agregarPresupuesto={agregarPresupuesto} agregarRestante={agregarRestante} estado={presupuesto}></Question>
           <Gastos changeRestante={changeRestante} restante={restante} presupuesto={presupuesto}></Gastos>
