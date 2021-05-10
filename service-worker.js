@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Aplicacion-administrador-presupuesto/precache-manifest.5fb9acf8db4cfeb6c9bdd24e47667fbb.js"
+  "/Aplicacion-administrador-presupuesto/precache-manifest.c4a22a20f25c92a74d9642092b55bd3f.js"
 );
 
 self.addEventListener('message', (event) => {
