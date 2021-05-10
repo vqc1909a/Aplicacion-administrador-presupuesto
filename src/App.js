@@ -18,7 +18,7 @@ function App() {
     <Fragment>
       <Header title="Gasto Semanal Hoy" />
       <main>
-          <Question title={`Coloca tu presupuesto hoy ${process.env.PRUEBA}`} agregarPresupuesto={agregarPresupuesto} agregarRestante={agregarRestante} estado={presupuesto}></Question>
+          <Question title={`Coloca tu presupuesto hoy ${process.env.REACT_APP_PRUEBA}`} agregarPresupuesto={agregarPresupuesto} agregarRestante={agregarRestante} estado={presupuesto}></Question>
           <Gastos changeRestante={changeRestante} restante={restante} presupuesto={presupuesto}></Gastos>
       </main>
     </Fragment>
