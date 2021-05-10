@@ -16,7 +16,7 @@
     "uuidv4": "^6.2.3"
   },
   "scripts": {
-    "predeploy": "npm run build && echo 'votolibre.xyz'  > ./build/CNAME",
+    "predeploy": "npm run build && echo votolibre.xyz  > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
