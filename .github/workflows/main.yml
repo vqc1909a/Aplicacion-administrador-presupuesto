@@ -1,0 +1,14 @@
+name: Secrets example
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: |
+          if [ "$REACT_APP_PRUEBA" == "prueba" ]
+          then
+            echo "Got secret"
+          fi
+        env: 
+          REACT_APP_PRUEBA: ${{ secrets.REACT_APP_PRUEBA }}
